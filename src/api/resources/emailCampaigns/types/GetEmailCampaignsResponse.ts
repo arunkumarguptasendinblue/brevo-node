@@ -86,6 +86,8 @@ export namespace GetEmailCampaignsResponse {
             utmContent?: string | undefined;
             /** The campaign ID used as utm_id parameter. Only present if UTM campaign tracking with ID is enabled. */
             utmID?: number | undefined;
+            /** The utm_id value applied to the campaign's tracking links, returned verbatim as a string. Falls back to your account's global UTM settings when no custom value was set on the campaign. Only returned when UTM tracking is enabled on the campaign and a value is set at one of these levels. Preferred field for new consumers — covers both numeric IDs and customer-supplied non-numeric strings. */
+            utmId?: string | undefined;
             /** The utm_medium value. Set to "EMAIL" when UTM campaign tracking is enabled. */
             utmMedium?: string | undefined;
             /** The utm_source value. Set to "Brevo" when UTM campaign tracking is enabled. */
